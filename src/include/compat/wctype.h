@@ -32,6 +32,7 @@
 
 #include <ucd/ucd.h>
 
+#if !defined(__EMSCRIPTEN__)
 #define iswalnum  ucd_isalnum
 #define iswalpha  ucd_isalpha
 #define iswblank  ucd_isblank
@@ -46,5 +47,6 @@
 #define iswxdigit ucd_isxdigit
 #define tolower ucd_tolower
 #define toupper udc_toupper
+#endif
 
 #endif

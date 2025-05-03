@@ -53,6 +53,15 @@ and pointing your browser to `http://localhost:8000/demo.html`)
     * `set_voice.apply(espeakng, voice)`: set the voice for synthesizing speech, `voice` must be the code string for the desired voice (e.g., `en`, `en-us`, `it`, etc.)
     * `synthesize(text, cb(samples, events))`: synthesize the given string `text` and call the callback function `cb` when done, passing the generated audio samples (`samples`) and events (`events`)
 
+4. Runtime methods exported for Node.js and browser compatibility:
+
+    The following runtime methods are exported to ensure compatibility with both client-side and server-side environments:
+    * `callMain`: allows calling the main function with arguments
+    * `print`: provides access to the print function
+    * `FS`: provides access to the Emscripten file system
+    * `ccall`: allows calling C functions directly
+    * `cwrap`: allows wrapping C functions for later use
+
     See the file [`demo.html`](demo.html) for details.
 
 
